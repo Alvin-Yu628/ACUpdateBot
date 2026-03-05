@@ -1,0 +1,23 @@
+{
+  "path": "universes/170935858",
+  "createTime": "2016-07-02T21:28:34.917Z",
+  "updateTime": "2026-02-20T20:04:18.800Z",
+  "displayName": "Aircraft Development",
+  "description": "Current project: MD-11\nHere you can take a sneak peak of what's going to be added to the game soon. You can also keep checking up on the plane's development to see how it's coming along :)\n\nShift + P to enter free cam / Or on mobile the small camera icon in the top left",
+  "group": "groups/2794513",
+  "visibility": "PUBLIC",
+  "youtubeSocialLink": {
+    "title": "Orange's YouTube",
+    "uri": "https://youtube.com/@Orange12345"
+  },
+  "voiceChatEnabled": false,
+  "ageRating": "AGE_RATING_UNSPECIFIED",
+  "privateServerPriceRobux": 0,
+  "desktopEnabled": true,
+  "mobileEnabled": true,
+  "tabletEnabled": true,
+  "consoleEnabled": true,
+  "vrEnabled": true,
+  "rootPlace": "universes/170935858/places/447213146",
+  "templateRootPlace": ""
+}
