@@ -1,23 +1,37 @@
 {
-  "path": "universes/170935858",
-  "createTime": "2016-07-02T21:28:34.917Z",
-  "updateTime": "2026-02-20T20:04:18.800Z",
-  "displayName": "Aircraft Development",
+  "id": 170935858,
+  "rootPlaceId": 447213146,
+  "name": "Aircraft Development",
   "description": "Current project: MD-11\nHere you can take a sneak peak of what's going to be added to the game soon. You can also keep checking up on the plane's development to see how it's coming along :)\n\nShift + P to enter free cam / Or on mobile the small camera icon in the top left",
-  "group": "groups/2794513",
-  "visibility": "PUBLIC",
-  "youtubeSocialLink": {
-    "title": "Orange's YouTube",
-    "uri": "https://youtube.com/@Orange12345"
+  "sourceName": null,
+  "sourceDescription": null,
+  "creator": {
+    "id": 2794513,
+    "name": "Pilot Training Club",
+    "type": "Group",
+    "isRNVAccount": false,
+    "hasVerifiedBadge": false
   },
-  "voiceChatEnabled": false,
-  "ageRating": "AGE_RATING_UNSPECIFIED",
-  "privateServerPriceRobux": 0,
-  "desktopEnabled": true,
-  "mobileEnabled": true,
-  "tabletEnabled": true,
-  "consoleEnabled": true,
-  "vrEnabled": true,
-  "rootPlace": "universes/170935858/places/447213146",
-  "templateRootPlace": ""
+  "price": null,
+  "allowedGearGenres": [
+    "Tutorial"
+  ],
+  "allowedGearCategories": [],
+  "isGenreEnforced": false,
+  "copyingAllowed": false,
+  "playing": 27,
+  "visits": 12422304,
+  "maxPlayers": 700,
+  "created": "2016-07-02T11:28:34.957Z",
+  "updated": "2026-03-04T23:06:16.7328394Z",
+  "studioAccessToApisAllowed": false,
+  "createVipServersAllowed": false,
+  "universeAvatarType": "MorphToR6",
+  "genre": "Building",
+  "genre_l1": "Entertainment",
+  "genre_l2": "Showcase & Hub",
+  "untranslated_genre_l1": "entertainment",
+  "isAllGenre": false,
+  "isFavoritedByUser": false,
+  "favoritedCount": 25196
 }

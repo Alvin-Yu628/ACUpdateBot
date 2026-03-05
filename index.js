@@ -27,15 +27,44 @@ const dataFilePath = process.env.DISK_PATH
     ? path.join(process.env.DISK_PATH, "data.json") 
     : "./JSON/data.json";
 
+// async function getWebsite() {
+//     try {
+//         //fetch update
+//         const result = await axios.get(`https://apis.roblox.com/cloud/v2/universes/${universeId}`, {
+//             headers: `x-api-key: ${process.env.roblox_api}`
+//         });
+
+//         if (result.status == 200) {
+//             const data = result.data;
+
+//             const dataToJSON = JSON.stringify(data, null, 2);
+//             fs.writeFileSync(dataFilePath, dataToJSON, (err) => {
+//                 if (err) {
+//                     console.error(err);
+//                     throw err;
+//                 }
+//             });
+
+//             console.log("updated data.json");
+//         } else {
+//             console.log("Failed", result);
+//         }
+
+//     } catch (err) {
+//         console.error(err);
+//         throw err;
+//     }
+// }
+
 async function getWebsite() {
     try {
         //fetch update
-        const result = await axios.get(`https://apis.roblox.com/cloud/v2/universes/${universeId}`, {
+        const result = await axios.get(`https://games.roblox.com/v1/games?universeIds=170935858`, {
             headers: `x-api-key: ${process.env.roblox_api}`
         });
 
         if (result.status == 200) {
-            const data = result.data;
+            const data = result.data.data[0];
 
             const dataToJSON = JSON.stringify(data, null, 2);
             fs.writeFileSync(dataFilePath, dataToJSON, (err) => {
@@ -55,6 +84,8 @@ async function getWebsite() {
         throw err;
     }
 }
+
+
 
 client.commands = new Collection();
 client.modals = new Collection();
