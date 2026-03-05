@@ -3,6 +3,11 @@ const axios = require('axios');
 const fs = require('fs');
 const { loadEvents } = require('./Functions/loadEvents');
 
+const express = require('express')
+
+const app = express();
+const port = process.env.PORT || 4000
+
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers],
 });
@@ -55,6 +60,14 @@ getWebsite();
 setInterval(function () {
     getWebsite();
 }, interval * 1000);
+
+app.get("/", (req, res) => [
+    res.send("What are you doing here")
+]);
+
+app.listen(port, () => {
+    console.log(`listening in port ${port}`)
+});
 
 client.login(process.env.token);
 
