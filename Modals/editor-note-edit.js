@@ -2,7 +2,10 @@ const { Client, ModalSubmitInteraction, MessageFlags, EmbedBuilder } = require("
 const axios = require("axios");
 
 const data = require('../JSON/data.json');
-const settings = require('../settings.json');
+const settings = require(process.env.DISK_PATH 
+    ? path.join(process.env.DISK_PATH, "settings.json") 
+    : "../settings.json");
+
 const { getAllServers } = require('../Functions/StoreManager');
 
 module.exports = {

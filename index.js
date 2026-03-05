@@ -1,6 +1,7 @@
 const { Client, Collection, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const axios = require('axios');
 const fs = require('fs');
+const path = require('path')
 const { loadEvents } = require('./Functions/loadEvents');
 
 const express = require('express')
@@ -16,10 +17,17 @@ require("dotenv").config({
     quiet: true,
 });
 
-const settings = require("./settings.json");
+const settings = require(process.env.DISK_PATH 
+    ? path.join(process.env.DISK_PATH, "store.json") 
+    : "./store.json");
+
 
 const universeId = settings.placeId;
 const interval = settings.intervalTime;
+
+const dataFilePath = process.env.DISK_PATH 
+    ? path.join(process.env.DISK_PATH, "data.json") 
+    : "./JSON/data.json";
 
 async function getWebsite() {
     try {
@@ -32,7 +40,7 @@ async function getWebsite() {
             const data = result.data;
 
             const dataToJSON = JSON.stringify(data, null, 2);
-            fs.writeFileSync('./JSON/data.json', dataToJSON, (err) => {
+            fs.writeFileSync(dataFilePath, dataToJSON, (err) => {
                 if (err) {
                     console.error(err);
                     throw err;
