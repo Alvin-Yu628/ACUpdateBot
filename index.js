@@ -17,9 +17,7 @@ require("dotenv").config({
     quiet: true,
 });
 
-const settings = require(process.env.DISK_PATH 
-    ? path.join(process.env.DISK_PATH, "store.json") 
-    : "./store.json");
+const settings = require('./settings.json')
 
 
 const universeId = settings.placeId;

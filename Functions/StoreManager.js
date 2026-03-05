@@ -2,9 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 // const filePath = path.resolve(__dirname, "../store.json");
-const filePath = process.env.DISK_PATH 
-    ? path.join(process.env.DISK_PATH, "store.json") 
-    : path.resolve(__dirname, "../store.json");
+const filePath = "../../store.json"
 
 if (!fs.existsSync(filePath)) {
     fs.writeFileSync(filePath, JSON.stringify({}, null, 2));
