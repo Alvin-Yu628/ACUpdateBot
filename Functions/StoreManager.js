@@ -1,7 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 
-const filePath = path.resolve(__dirname, "../store.json");
+// const filePath = path.resolve(__dirname, "../store.json");
+const filePath = '/var/data/store.json'; 
+
+if (!fs.existsSync(filePath)) {
+    fs.writeFileSync(filePath, JSON.stringify({}, null, 2));
+}
 
 class GuildSettings {
     constructor(guildId, data) {
